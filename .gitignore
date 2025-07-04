@@ -1,0 +1,15 @@
+# Ignorar entornos virtuales en cualquier subdirectorio
+*/venv/
+venv/
+
+# Ignorar archivos de base de datos
+*.db
+
+# Ignorar archivos de caché de Python
+__pycache__/
+*.pyc
+
+# Ignorar archivos de configuración específicos del OS
+.DS_Store # macOS
+Thumbs.db # Windows
+.vscode/ # Opcional: ignorar configuración local de VS Code
