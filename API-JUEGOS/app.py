@@ -1,7 +1,7 @@
 from flask import Flask
 from config import Config
-from database import db
-from routes.juegos_routes import VideoJueos_bp
+from database_juegos import db
+from routes_juegos.Juegos_routes import VideoJueos_bp
 
 app = Flask(__name__)
 

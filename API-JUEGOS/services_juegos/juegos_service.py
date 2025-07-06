@@ -1,5 +1,5 @@
-from database.models import VideoJuego
-from database import db
+from database_juegos.models import VideoJuego
+from database_juegos import db
 
 def get_video_juegos():
     return VideoJuego.query.all()
