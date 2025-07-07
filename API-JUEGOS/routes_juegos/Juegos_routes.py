@@ -26,7 +26,7 @@ def get_juego_route(id):
         return jsonify({"message":f"No se encontro el juego de id {id}"}), 404
     return jsonify(juego.to_dict())
 
-@VideoJuegos_bp("/videojuesgos/<int:id>", methods = ["PATCH"])
+@VideoJuegos_bp.route("/videojuegos/<int:id>", methods = ["PATCH"])
 
 def patch_juegos_route(id):
     data = request.get_json()
@@ -37,14 +37,14 @@ def patch_juegos_route(id):
         return jsonify({"message":f"No se encontro el juego de id {id}"}), 404
     return jsonify(juego.to_dict())
 
-@VideoJuegos_bp("/videojuegos/<int:id>", methods = ["DELETE"])
+@VideoJuegos_bp.route("/videojuegos/<int:id>", methods = ["DELETE"])
 
 def delete_juego_route(id):
     juego = JS.delete_juego(id)
     if not juego:
         return jsonify({"message":f"No se encontro el juego de id {id}"}), 404
     else:
-        return jsonify({"message": "El juego se ha borrado exitosamente"}), 024
+        return jsonify({"message": "El juego se ha borrado exitosamente"}), 204
 
     
 

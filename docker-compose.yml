@@ -1,6 +1,14 @@
 version: '3.8'
 
 services:
+  api_juegos:
+    build: ./API-JUEGOS
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./API-JUEGOS:/app
+    environment:
+      FLASK_ENV: developmen
   api_plantas:
     build: ./API-PLANTAS
     ports:
@@ -9,4 +17,4 @@ services:
       - ./API-PLANTAS:/app
     environment:
       FLASK_ENV: development
- 
+  
