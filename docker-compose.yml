@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  api_plantas:
+    build: ./API-PLANTAS
+    ports:
+      - "5001:5000" # Importante: puerto diferente en el host para no chocar
+    volumes:
+      - ./API-PLANTAS:/app
+    environment:
+      FLASK_ENV: development
+ 
